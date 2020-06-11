@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
@@ -8,6 +8,7 @@ align-items: flex-start;;
 align-content: flex-start;
 justify-content: space-evenly;
 // margin: 2% 7%;
+padding: 10vh 0 0;
 background-color: black;
 color:white;
 `
@@ -19,8 +20,8 @@ justify-content: center;
 align-items: center;
 width: calc(50% - 20px);
 margin: 10px;
-border 2px dashed white;
-border-radius 6px;
+border: 2px dashed white;
+border-radius: 6px;
 `
 const StyledImg = styled.img`
 display: block;
@@ -36,11 +37,15 @@ max-width: 40%;
 `
 
 const StyledH1 = styled.h1`
+border-bottom: 1px solid white;
 
 `
 
 const StyledP = styled.p`
-line-height: 0em
+font-size: ${props => {
+        return props.small = `10px`
+    }};
+
 `
 
 function Body(props) {
